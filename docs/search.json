@@ -1,9 +1,93 @@
 [
   {
-    "objectID": "index.html#hello-there",
-    "href": "index.html#hello-there",
-    "title": "Quarto Presentations",
-    "section": "Hello, There",
-    "text": "Hello, There\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n\n\nhttps://quarto.org"
+    "objectID": "index.html#quarto",
+    "href": "index.html#quarto",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/.\n\nThis is part of the Quarto documentation."
+  },
+  {
+    "objectID": "index.html#bullets",
+    "href": "index.html#bullets",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Bullets",
+    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code\n\n\nThis is part of the Quarto documentation."
+  },
+  {
+    "objectID": "index.html#code",
+    "href": "index.html#code",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Code",
+    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\n\nThis is part of the Quarto documentation.\n\nYou can also add text marked as code!"
+  },
+  {
+    "objectID": "index.html#tabset-example",
+    "href": "index.html#tabset-example",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Tabset example",
+    "text": "Tabset example\n\nExample 1Example 2\n\n\nContent here for tabset 1 :)\n\n\nMore content here, for tabset 2 :)"
+  },
+  {
+    "objectID": "index.html#incremental-content",
+    "href": "index.html#incremental-content",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Incremental content",
+    "text": "Incremental content\nHi!\n\nUse . . . to separate content as an incremental slide!"
+  },
+  {
+    "objectID": "index.html#you-can-add-r-code",
+    "href": "index.html#you-can-add-r-code",
+    "title": "Quarto R-Ladies Theme",
+    "section": "You can add R code",
+    "text": "You can add R code\n\nlibrary(dplyr)\nlibrary(ggplot2)\ng &lt;- starwars |&gt; \n  ggplot() +\n  geom_point(aes(x = height, y = mass)) +\n  theme_light()"
+  },
+  {
+    "objectID": "index.html#and-show-the-results-aswell",
+    "href": "index.html#and-show-the-results-aswell",
+    "title": "Quarto R-Ladies Theme",
+    "section": "And show the results aswell :)",
+    "text": "And show the results aswell :)\n\ng"
+  },
+  {
+    "objectID": "index.html#what-about-tables",
+    "href": "index.html#what-about-tables",
+    "title": "Quarto R-Ladies Theme",
+    "section": "What about tables?",
+    "text": "What about tables?\nknitr::kable()\n\n\n\ntab &lt;- starwars |&gt;\n  tidyr::drop_na(species) |&gt; \n  group_by(species) |&gt;\n  summarise(\n    n = n(),\n    mean_heigth = round(mean(height, na.rm = TRUE)),\n    mean_mass = round(mean(mass, na.rm = TRUE))\n  ) |&gt; \n  slice_max(order_by = n, n = 4) \n\nknitr::kable(tab)\n\n\n\n\n\n\n\nspecies\nn\nmean_heigth\nmean_mass\n\n\n\n\nHuman\n35\n177\n83\n\n\nDroid\n6\n131\n70\n\n\nGungan\n3\n209\n74\n\n\nKaminoan\n2\n221\n88\n\n\nMirialan\n2\n168\n53\n\n\nTwi’lek\n2\n179\n55\n\n\nWookiee\n2\n231\n124\n\n\nZabrak\n2\n173\n80"
+  },
+  {
+    "objectID": "index.html#dtdatatable",
+    "href": "index.html#dtdatatable",
+    "title": "Quarto R-Ladies Theme",
+    "section": "DT::datatable()",
+    "text": "DT::datatable()\nWith the smaller class in the slide! Ex: ## slide name {.smaller}"
+  },
+  {
+    "objectID": "index.html#gtgt",
+    "href": "index.html#gtgt",
+    "title": "Quarto R-Ladies Theme",
+    "section": "gt::gt()",
+    "text": "gt::gt()\n\n\n\n\n\n\n  \n    \n    \n      species\n      n\n      mean_heigth\n      mean_mass\n    \n  \n  \n    Human\n35\n177\n83\n    Droid\n6\n131\n70\n    Gungan\n3\n209\n74\n    Kaminoan\n2\n221\n88\n    Mirialan\n2\n168\n53\n    Twi'lek\n2\n179\n55\n    Wookiee\n2\n231\n124\n    Zabrak\n2\n173\n80"
+  },
+  {
+    "objectID": "index.html#reactablereactable",
+    "href": "index.html#reactablereactable",
+    "title": "Quarto R-Ladies Theme",
+    "section": "reactable::reactable()",
+    "text": "reactable::reactable()"
+  },
+  {
+    "objectID": "index.html#diagrams-with-mermaid",
+    "href": "index.html#diagrams-with-mermaid",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Diagrams with Mermaid!",
+    "text": "Diagrams with Mermaid!\nRead about how to create a diagram in this post by Mine Çetinkaya-Rundel.\n\n\n\n#quartotip 21: Create diagrams in Quarto documents using Mermaid or Graphviz in executable code cells, similar to how you create figures.Read more: https://t.co/3qx9oSNCay pic.twitter.com/fYzGcISl4h\n\n— Quarto (@quarto_pub) July 19, 2022"
+  },
+  {
+    "objectID": "index.html#exporting-into-pdf",
+    "href": "index.html#exporting-into-pdf",
+    "title": "Quarto R-Ladies Theme",
+    "section": "Exporting into PDF",
+    "text": "Exporting into PDF\nYou can use the function pagedown::chrome_print() to print the HTML version into a PDF!\npagedown::chrome_print(\"path-to-file.html\")\n\n\n\nR-Ladies theme for Quarto Presentations. Code available on GitHub."
   }
 ]
