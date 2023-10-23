@@ -4,28 +4,28 @@
     "href": "index.html#about-me",
     "title": "Zero to Quarto Workshop",
     "section": "About me",
-    "text": "About me\n\n\nChi Zhang\nStatistician and R developer\nQuarto has become one of my main activities post-phd\n\nteach biostatistics with quarto websites;\nbuild personal portfolio;\ncollaborate with non-coding colleagues;\npersonal note-taking system …"
+    "text": "About me\n\n\nChi Zhang\nStatistician and R developer, University of Oslo, Norway\nQuarto has become one of my main activities post-phd\n\n\nteach biostatistics with quarto websites;\nbuild personal portfolio;\ncollaborate with non-coding colleagues;\npersonal note-taking system …"
   },
   {
     "objectID": "index.html#about-this-workshop",
     "href": "index.html#about-this-workshop",
     "title": "Zero to Quarto Workshop",
     "section": "About this workshop",
-    "text": "About this workshop\nQuarto is the new way of open source publishing, and it can do so many things:\nReports and books; presentation; websites; … Each is a project.\n\n\nToday we build a quarto website, and use GitHub Pages to publish it.\n\nWhat makes a quarto project?\nBuild and publish on GitHub\nAdding content: navigation, code and more\ntime permits: interactivity with webr; …"
+    "text": "About this workshop\nQuarto is the new way of open source publishing, and it can do so many things:\nReports and books; presentation; websites; … Each is a quarto project.\n\n\nToday we build a quarto website, and use GitHub Pages to publish it.\n\nWhat makes a quarto project?\nBuild and publish on GitHub\nAdding content: navigation, code and more\ntime permits: interactivity with webr; …"
   },
   {
     "objectID": "index.html#about-this-workshop-1",
     "href": "index.html#about-this-workshop-1",
     "title": "Zero to Quarto Workshop",
     "section": "About this workshop",
-    "text": "About this workshop\nWorkshop website with step-by-step tutorial:\nhttps://andreaczhang.github.io/workshop-02quarto/\n\nWorkshop website template for you to download and modify:\nhttps://andreaczhang.github.io/template-02quarto/\n\nPlease clone the template repository to your local machine :)"
+    "text": "About this workshop\nWorkshop website and step-by-step tutorial\n\nIn R-Ladies Zurich\nSource code to build the workshop website,\nhttps://github.com/rladies-zurich/workshop-02quarto\n\nA simple template (template-02quarto) for you to download and modify, https://github.com/rladies-zurich/template-02quarto\n\nPlease clone the template repository to your local machine :)"
   },
   {
     "objectID": "index.html#practice-1-set-up-a-version-controlled-quarto-project",
     "href": "index.html#practice-1-set-up-a-version-controlled-quarto-project",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 1: Set up a version controlled quarto project",
-    "text": "Practice 1: Set up a version controlled quarto project\n\n\n\n\n\n\nNote\n\n\nYou need\n\nGithub account\nRstudio (latest version; at least late 2022)\nQuarto (v1.2 or 1.3)\n\n\n\n\n\n(Follow the step-by-step tutorial part 1)"
+    "text": "Practice 1: Set up a version controlled quarto project\n\n\n\n\n\n\nNote\n\n\nYou need\n\nGithub account\nRstudio\nQuarto (v1.2 or 1.3)\n\n\n\n\n\n(Follow the step-by-step tutorial part 1)"
   },
   {
     "objectID": "index.html#whats-in-a-quarto-project",
@@ -39,14 +39,14 @@
     "href": "index.html#quarto.yml",
     "title": "Zero to Quarto Workshop",
     "section": "_quarto.yml",
-    "text": "_quarto.yml\nIn this file, some basic information of the project is specified, such as project type, layout, theme.\nThis is where you modify how the website looks like.\nproject:\n  type: website\n  output-dir: docs\n\nwebsite:\n  page-navigation: true\n  title: \"Zero to Quarto Workshop\"\n\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\n    right: \n      - icon: github\n        href: https://github.com\n        \nformat:\n  html:\n    # theme: zephyr\n    theme: styles.scss\n    toc: true"
+    "text": "_quarto.yml\nIn this file, some basic information of the project is specified, such as project type, layout, theme.\nThis is where you modify the appearance of your website.\nproject:\n  type: website\n  output-dir: docs\n\nwebsite:\n  page-navigation: true\n  title: \"Zero to Quarto Workshop\"\n\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\n    right: \n      - icon: github\n        href: https://github.com\n        \nformat:\n  html:\n    # theme: zephyr\n    theme: styles.scss\n    toc: true"
   },
   {
     "objectID": "index.html#index.qmd",
     "href": "index.html#index.qmd",
     "title": "Zero to Quarto Workshop",
     "section": "index.qmd",
-    "text": "index.qmd\nYour homepage: when others click the URL you shared with them, this is where they land.\nContent blocked by --- is the YAML header, which appears at the top of your page. Author, date can be specified here.\n---\ntitle: \"Zero to Quarto Workshop\"\nsubtitle: \"Build your first quarto website (or some other cool things!)\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n---\n\nDate: **Monday 23 October 2023, 6:30PM to 8:00PM, CEST** \n------------------\n \n# Welcome!\n\nQuarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 that just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free."
+    "text": "index.qmd\nYour homepage: when others click the URL you shared with them, this is where they land.\nContent blocked by --- is the YAML header, which appears at the top of your page. Author, date can also be specified here.\n---\ntitle: \"Zero to Quarto Workshop\"\nsubtitle: \"Build your first quarto website (or some other cool things!)\"\nformat: \n  html:\n    toc: true\n    toc-depth: 2\n---\n\nDate: **Monday 23 October 2023, 6:30PM to 8:00PM, CEST** \n------------------\n \n# Welcome!\n\nQuarto is one of the most discussed topics in the R community for the past year. In the posit conf 2023 that just happened a few weeks ago, there were 23 (!) talks on this open-source publishing system. You can build a personal or organisation website; a course or workshop website; a blog; a scientific report; a presentation; all with the possibility to display and execute code (R, Python, Julia), and for free."
   },
   {
     "objectID": "index.html#styles.scss",
@@ -60,28 +60,28 @@
     "href": "index.html#practice-2-render-your-quarto-project",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 2: Render your quarto project",
-    "text": "Practice 2: Render your quarto project\nOpen index.qmd, find the render button. Click.\nDo you see a HTML page in your Viewer?"
+    "text": "Practice 2: Render your quarto project\nOpen index.qmd, find the render button.\nClick render\nDo you see a HTML page in your Viewer?"
   },
   {
     "objectID": "index.html#practice-3-configure-your-quarto-project",
     "href": "index.html#practice-3-configure-your-quarto-project",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 3: configure your quarto project",
-    "text": "Practice 3: configure your quarto project\nYou need two more things before pushing everything to GitHub.\n\nSet output-dir to docs in _quarto.yml\nproject:\n  type: website\n  output-dir: docs\n\nCreate .nojekyll file\nIn terminal (or your favorite command line editor),\ntouch .nojekyll\n\nRender one last time, now commit everything, push to remote (GitHub)."
+    "text": "Practice 3: configure your quarto project\nYou need two more things before pushing everything to GitHub.\nSet output-dir to docs in _quarto.yml\nproject:\n  type: website\n  output-dir: docs\n(This is already done in the template you downloaded)\n\nCreate .nojekyll file\nIn terminal (or your favorite command line editor), in the root directory\ntouch .nojekyll\n\nRender one last time, commit everything, push to remote (GitHub)."
   },
   {
     "objectID": "index.html#practice-4-configure-gh-pages",
     "href": "index.html#practice-4-configure-gh-pages",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 4: Configure GH Pages",
-    "text": "Practice 4: Configure GH Pages\nGo to Setting &gt; Pages &gt; Build and deployment, choose Deploy from a branch.\nUnder Branch, select /docs. Save. It should take less than 1 minute to complete.\nYour site should be available at https://your_username.github.io/repo_name."
+    "text": "Practice 4: Configure GH Pages\nGo to Setting &gt; Pages &gt; Build and deployment\n\nChoose Deploy from a branch\nUnder Branch, select /docs. Save. It should take less than 1 minute to complete.\n\nOnce complete, your site should be available at https://your_username.github.io/repo_name."
   },
   {
     "objectID": "index.html#site-navigation-add-a-new-page",
     "href": "index.html#site-navigation-add-a-new-page",
     "title": "Zero to Quarto Workshop",
     "section": "Site navigation, add a new page",
-    "text": "Site navigation, add a new page\nThe location of a new page is specified in _quarto.yml as well.\nTo add another page in parallel to Home (to the left), add the following lines,\nwebsite:\n  page-navigation: true\n  title: \"Zero to Quarto Workshop\"\n\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\n      - href: your_new_page.qmd\n        text: Your_new_page_name\nThen, create a new your_new_page.qmd document.\nYou can either copy and paste index.qmd and modify the content; or use the button top-left of Rstudio &gt; Add new quarto document."
+    "text": "Site navigation, add a new page\nThe location of a new page is specified in _quarto.yml.\nTo add another page next to Home, add the following lines,\nwebsite:\n  page-navigation: true\n  title: \"Zero to Quarto Workshop\"\n\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\n      - href: your_new_page.qmd\n        text: Your_new_page_name\nThen, create a new your_new_page.qmd document.\nYou can either copy and paste index.qmd and modify the content; or use the button top-left of Rstudio &gt; Add new quarto document."
   },
   {
     "objectID": "index.html#theme",
@@ -95,7 +95,7 @@
     "href": "index.html#practice-5-add-a-new-page-to-your-website",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 5: Add a new page to your website",
-    "text": "Practice 5: Add a new page to your website\nIt is always a good idea to add an about page to your website!\n\nTasks\nTry to create an about.qmd file, write a few lines about what kind of website you wnat to create.\n\nPosition it to the right of the home page.\n\nTest out a few quarto themes, and/or use different colors specified in styles.scss (optional)."
+    "text": "Practice 5: Add a new page to your website\nIt is always a good idea to add an about page to your website to let people know what the website is about!\nTasks\n\nCreate an about.qmd file, write a few lines about what kind of website you want to create: e.g. workshop? personal website?\nPosition your about page next to the right of the home page. (More on website navigation)\nTest out a few quarto themes, and/or use different colors specified in styles.scss (optional).\n\n(Quarto provides special layout for about pages. Feel free to check them out!)"
   },
   {
     "objectID": "index.html#figures-and-tables",
@@ -116,13 +116,13 @@
     "href": "index.html#summary",
     "title": "Zero to Quarto Workshop",
     "section": "Summary",
-    "text": "Summary\nToday we went through 4 steps:\n\nset a version controlled quarto project\nbuild the project locally, configure necessary parts (output-dir and .nojekyll)\npush to GitHub, configure GH pages setting\nadd more content\n\nLearn more\n\nQuarto Gallery shows a nice and inspiring collection of the types of projects you can create. Make sure you check them out!\nOfficial guide on creating website, book, presentation and more."
+    "text": "Summary\nToday we went through 4 steps:\n\nset a version controlled quarto project\nbuild the project locally, configure necessary parts (output-dir and .nojekyll)\npush to GitHub, configure GH pages setting (more about publishing)\nadd more content\n\nLearn more\n\nQuarto Gallery shows a nice and inspiring collection of the types of projects you can create. Get inspired!\nOfficial guide on creating website, book, presentation and more."
   },
   {
     "objectID": "index.html#practice-6-add-a-plot-to-your-website",
     "href": "index.html#practice-6-add-a-plot-to-your-website",
     "title": "Zero to Quarto Workshop",
     "section": "Practice 6: Add a plot to your website",
-    "text": "Practice 6: Add a plot to your website\nExperiment with adding content to your website:\n\nreproduce the code chunk example in a quarto document; (you need ggplot2 package to do it)\nfind a figure, try to include it in your quarto document\n\n\n\n\nYou can find workshop website and template on GitHub"
+    "text": "Practice 6: Add a plot to your website\nExperiment with adding content to your website:\n\nReproduce the code chunk example in a quarto document; (you need ggplot2 package to do it)\nInclude a figure in your quarto document.\n\na photo is a good idea to use for your personal portfolio;\nor use the figure from the template -02quarto.\n\n\n\n\n\nYou can find workshop website and template on GitHub"
   }
 ]

@@ -1,7 +1,8 @@
 ---
 title: "Zero to Quarto Workshop"
-subtitle: "Making your first quarto website"
+subtitle: "Making your first quarto website with R-Ladies Zürich!"
 author: "[Chi Zhang](https://andreaczhang.github.io)"
+date: 2023-10-23
 format: 
   rladies-revealjs:
     footer: "You can find workshop [website](https://andreaczhang.github.io/workshop-02quarto/) and [template](https://github.com/andreaczhang/template-02quarto) on GitHub"
@@ -18,14 +19,17 @@ embed-resources: true
 ::: {.column width="60%"}
 [Chi Zhang](https://andreaczhang.github.io)
 
-Statistician and R developer
+Statistician and R developer, University of Oslo, Norway
 
 Quarto has become one of my main activities post-phd 
 
-* teach biostatistics with quarto websites; 
-* build personal portfolio; 
-* collaborate with non-coding colleagues; 
+<br>
+
+* [teach biostatistics](https://ocbe-uio.github.io/teaching_mf9130e/) with quarto websites; 
+* build [personal portfolio](https://andreaczhang.github.io); 
+* [collaborate](https://andreaczhang.github.io/noreden_dev/documentation/) with non-coding colleagues; 
 * personal note-taking system ...
+
 :::
 ::::
 
@@ -36,7 +40,7 @@ Quarto has become one of my main activities post-phd
 
 [Quarto](https://quarto.org) is the new way of open source publishing, and it can do [so many things](https://quarto.org/docs/gallery/):
 
-Reports and books; presentation; websites; ... Each is a <u>project</u>.
+Reports and books; presentation; websites; ... Each is a <u>quarto project</u>.
 
 . . .
 
@@ -52,16 +56,20 @@ Today we build a **quarto website**, and use [GitHub Pages](https://pages.github
 
 ## About this workshop
 
-Workshop website with **step-by-step tutorial**:
-
-[https://andreaczhang.github.io/workshop-02quarto/](https://andreaczhang.github.io/workshop-02quarto/)
-
+[Workshop website](https://andreaczhang.github.io/workshop-02quarto/) and [step-by-step tutorial](https://andreaczhang.github.io/workshop-02quarto/tutorial.html)
 
 <br>
 
-Workshop website **template** for you to download and modify: 
+### In R-Ladies Zurich
 
-[https://andreaczhang.github.io/template-02quarto/](https://andreaczhang.github.io/template-02quarto/)
+Source code to build the workshop website, 
+
+[https://github.com/rladies-zurich/workshop-02quarto](https://github.com/rladies-zurich/workshop-02quarto)
+
+<br>
+
+A simple **template** ([template-02quarto](https://github.com/rladies-zurich/template-02quarto)) for you to download and modify,
+[https://github.com/rladies-zurich/template-02quarto](https://github.com/rladies-zurich/template-02quarto)
 
 <br>
 
@@ -74,7 +82,7 @@ Please <u>clone the template repository</u> to your local machine :)
 You need 
 
 * Github account 
-* Rstudio (latest version; at least late 2022)
+* Rstudio 
 * Quarto (v1.2 or 1.3)
 
 :::
@@ -101,7 +109,7 @@ You need
 
 In this file, some basic information of the project is specified, such as **project type**, **layout**, **theme**.
 
-This is where you modify how the website looks like.
+This is where you modify the appearance of your website.
 
 ```
 project:
@@ -133,7 +141,7 @@ format:
 
 Your homepage: when others click the URL you shared with them, this is where they land.
 
-Content blocked by `---` is the `YAML` header, which appears at the top of your page. Author, date can be specified here.
+Content blocked by `---` is the `YAML` header, which appears at the top of your page. **Author**, **date** can also be specified here.
 
 ```
 ---
@@ -156,7 +164,9 @@ Quarto is one of the most discussed topics in the R community for the past year.
 
 ## `styles.scss`
 
-This file is optional; but good to have - when you want to customize the color and fonts. 
+This file is optional; but good to have - when you want to customize the <span style='color:orange'>color and fonts</span>. 
+
+
 
 However, if you are happy with the [quarto preset themes](https://quarto.org/docs/output-formats/html-themes.html), `styles.scss` is not necessary for the website to work.
 
@@ -184,7 +194,9 @@ $link-color: $theme-purple4;
 ## Practice 2: Render your quarto project
 
 
-Open `index.qmd`, find the **render** button. Click. 
+Open `index.qmd`, find the **render** button. 
+
+Click render 
 
 Do you see a HTML page in your *Viewer*?
 
@@ -199,9 +211,8 @@ Do you see a HTML page in your *Viewer*?
 
 ## Practice 3: configure your quarto project
 
-You need two more things before pushing everything to GitHub.
+You need <u>two more things</u> before pushing everything to GitHub.
 
-<br>
 
 ### Set output-dir to `docs` in `_quarto.yml`
 
@@ -211,41 +222,44 @@ project:
   output-dir: docs
 ```
 
+(This is already done in the template you downloaded)
+
 <br>
 
 ### Create `.nojekyll` file
 
-In terminal (or your favorite command line editor), 
+In terminal (or your favorite command line editor), in the *root* directory 
 ```
 touch .nojekyll
 ```
 
 <br> 
 
-Render one last time, now commit everything, push to remote (GitHub). 
+Render one last time, **commit** everything, push to remote (GitHub). 
 
 ## Practice 4: Configure GH Pages
 
-Go to Setting > Pages > Build and deployment, choose **Deploy from a branch**. 
+Go to Setting > Pages > Build and deployment
 
-Under **Branch**, select `/docs`. Save. It should take less than 1 minute to complete. 
+* Choose **Deploy from a branch**
+* Under **Branch**, select `/docs`. Save. 
+It should take less than 1 minute to complete. 
 
-Your site should be available at `https://your_username.github.io/repo_name`. 
+Once complete, your site should be available at `https://your_username.github.io/repo_name`. 
 
-![](resources/3_config_ghp.png){.absolute .fragment top="350" right="80" width="700"}
-
-
+![](resources/3_config_ghp.png){.absolute .fragment top="400" left="150" width="650"}
 
 
 
-# Add content to your website  {background-color="#562457"}
+
+
+# Add content to your website (part 1) {background-color="#562457"}
 
 ## Site navigation, add a new page
 
-The location of a new page is specified in `_quarto.yml` as well. 
+The location of a new page is specified in `_quarto.yml`. 
 
-To add another page in parallel to `Home` (to the left), add the following lines,
-
+To add another page next to `Home`, add the following lines,
 
 ```
 website:
@@ -284,21 +298,16 @@ format:
 
 ## Practice 5: Add a new page to your website
 
-It is always a good idea to add an `about` page to your website!
+It is always a good idea to add an `about` page to your website to let people know what the website is about!
 
-<br>
 
 ### Tasks
 
-Try to create an `about.qmd` file, write a few lines about what kind of website you wnat to create.
+* Create an `about.qmd` file, write a few lines about what kind of website you want to create: e.g. workshop? personal website?
+* Position your `about` page next to the right of the home page. (More on [website navigation](https://quarto.org/docs/websites/website-navigation.html))
+* Test out a few quarto themes, and/or use different colors specified in `styles.scss` (optional).
 
-<br>
-
-Position it to the right of the home page. 
-
-<br>
-
-Test out a few quarto themes, and/or use different colors specified in `styles.scss` (optional).
+(Quarto provides special layout for [about pages](https://quarto.org/docs/websites/website-about.html). Feel free to check them out!)
 
 
 # Add content to your website (part 2) {background-color="#562457"}
@@ -333,7 +342,7 @@ Read about how to work on [figures](https://quarto.org/docs/authoring/figures.ht
 
 ## Code chunks
 
-Use a code fence (3 backticks) with the language you wish to run the code.
+Use a `code fence` (3 backticks) with the language you wish to run the code.
 
 ![](resources/4_rcode.png)
 
@@ -343,12 +352,12 @@ Today we went through 4 steps:
 
 * set a version controlled quarto project
 * build the project locally, configure necessary parts (`output-dir` and `.nojekyll`)
-* push to GitHub, configure GH pages setting
+* push to GitHub, configure GH pages setting (more about [publishing](https://quarto.org/docs/publishing/))
 * add more content
 
 ### Learn more
 
-* [Quarto Gallery](https://quarto.org/docs/gallery/) shows a nice and inspiring collection of the types of projects you can create. Make sure you check them out!
+* [Quarto Gallery](https://quarto.org/docs/gallery/) shows a nice and inspiring collection of the types of projects you can create. Get inspired!
 * Official guide on creating [website](https://quarto.org/docs/websites/), [book](https://quarto.org/docs/books/), [presentation](https://quarto.org/docs/presentations/) and more.
 
 
@@ -357,7 +366,9 @@ Today we went through 4 steps:
 
 Experiment with adding content to your website: 
 
-* reproduce the code chunk example in a quarto document; (you need `ggplot2` package to do it)
-* find a figure, try to include it in your quarto document
+* Reproduce the code chunk example in a quarto document; (you need `ggplot2` package to do it)
+* Include a figure in your quarto document. 
+  * a photo is a good idea to use for your personal portfolio;
+  * or use the figure from the [template -02quarto](https://github.com/rladies-zurich/template-02quarto).
 
 
